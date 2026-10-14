@@ -1,0 +1,6 @@
+{
+  "name": "Task Reminder",
+  "description": "Smart daily reminder and task management with scheduled notifications, voice command input, priority categories, dark mode, and cloud sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

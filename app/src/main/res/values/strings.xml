@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task Reminder</string>
+    <string name="notification_channel_name">Task Reminders</string>
+    <string name="notification_channel_description">Notifications for scheduled tasks and reminders</string>
+    <string name="action_complete">সম্পন্ন করুন</string>
+    <string name="action_snooze">১০ মিনিট পর মনে করিয়ে দাও</string>
+    <string name="action_view">দেখুন</string>
+</resources>

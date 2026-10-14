@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "Task": {
+      "title": "Task",
+      "description": "A daily task and reminder item belonging to a user",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique task ID"
+        },
+        "userId": {
+          "type": "string",
+          "description": "ID of the user who owns the task"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title or headline of the task"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed notes or description"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category name: Work, Personal, Study, Health, Shopping, Other"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority level: HIGH, MEDIUM, LOW"
+        },
+        "reminderTimestamp": {
+          "type": "integer",
+          "description": "Scheduled reminder epoch time in milliseconds, 0 if none"
+        },
+        "isCompleted": {
+          "type": "boolean",
+          "description": "Whether the task is marked as completed"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when task was created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when task was last updated"
+        }
+      },
+      "required": ["userId", "title", "category", "priority", "isCompleted", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/tasks/{taskId}": {
+      "schema": "Task",
+      "description": "User daily tasks and reminders"
+    }
+  }
+}
